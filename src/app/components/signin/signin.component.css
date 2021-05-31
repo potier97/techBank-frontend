@@ -1,0 +1,89 @@
+/* contendero del componente y fondo */
+.login-wrapper {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(36, 123, 160, 0.35),
+      rgba(80, 81, 79, 0.35)
+    ),
+    url("https://source.unsplash.com/1200x700/?finance,id=2");
+  -webkit-background-size: cover;
+  -moz-background-size: center cover;
+  background-size: cover;
+  background-position: center top;
+  height: calc(100% - 64px);
+}
+
+/* margen del titulo */
+.login-tittle {
+  margin-bottom: 16px;
+}
+
+/* caja del contenido del formlario */
+.box {
+  margin: 10px 10px;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 330px;
+}
+ 
+/* borde de color azul */
+.box:before {
+  content: "";
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: -10px;
+  background: rgba(36, 123, 160, 0.55);
+  left: 0;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  z-index: -1;
+}
+
+/* inputs */
+.login-wrapper .example-form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%; 
+}
+
+/* ancho del formlario */
+.login-wrapper .example-full-width,
+.login-wrapper .btn-block {
+  width: 100%;
+}
+
+/* Espaciado de titulo del formlario */
+.login-wrapper mat-card-header {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+}
+
+/* Titulo del formlario */
+.login-wrapper mat-card-header mat-card-title {
+  font-size: 25px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+/* Espacio del contenido del formlario */
+.login-wrapper .mat-card {
+  padding: 40px 30px 50px;
+}
+
+/* contenedor del formulario BOTON  */
+.login-wrapper .mat-stroked-button {
+  border: 1px solid currentColor;
+  line-height: 54px;
+  background: rgba(36, 123, 160, 0.35);
+}
+ 

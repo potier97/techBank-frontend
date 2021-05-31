@@ -1,0 +1,60 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Registro</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form" (submit)="sendReqest()">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" [(ngModel)]="newUser.name" placeholder="Nombre" name="userName" required autofocus/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" [(ngModel)]="newUser.lastName"  placeholder="Apellidos" name="userLastName" required/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" [(ngModel)]="newUser.document"  placeholder="Documento" name="userDocument" required />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Tipo de Documento...</mat-label>
+          <mat-select required type="text" [(ngModel)]="newUser.typeDocument"  name='userTypeDocument' color='secundary' >
+            <mat-option *ngFor="let tdocument of DocumentList" [value]="tdocument"
+              >{{ tdocument }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="email" required [(ngModel)]="newUser.mail" placeholder="Correo" name='userMail' required />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" [(ngModel)]="newUser.direction" placeholder="Direción" name="userDirection" required />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="password" required [(ngModel)]="newUser.password" placeholder="Contraseña" name="userPassword" required />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="password" required [(ngModel)]="newUser.repeatedPassword" placeholder="Repetir Contraseña" name="userRepeatedPassword" required/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" >
+          <mat-label>Tipo de Cuenta...</mat-label>
+          <mat-select required  type="text" [(ngModel)]="newUser.role" name="userRole">
+            <mat-option [value]="tAccount"  *ngFor="let tAccount of AccountList"
+              >{{ tAccount }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-content> 
+
+      
+      <button mat-stroked-button color="secundary" class="btn-block">Crear</button>
+    </form>
+  </mat-card>
+</div>

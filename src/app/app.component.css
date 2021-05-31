@@ -1,0 +1,21 @@
+.expanded-toolbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerTittle {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.tittleToolbar {
+  align-items: center;
+  padding-left: 10%;
+}
+
+.containerIcon {
+  vertical-align: sub;
+}
+
+ 
